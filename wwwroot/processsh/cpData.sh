@@ -1,0 +1,1 @@
+sysctl hw | grep -e hw.ncpu -e hw.logicalcpu -e hw.memsize | awk '{s=s"["$1" "$2} END {print s}'

@@ -1,0 +1,1 @@
+sysctl kern | grep -e kern.maxfiles -e kern.maxfilesperproc | awk '{s=s"["$1" "$2} END {print s}'

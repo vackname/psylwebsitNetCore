@@ -1,0 +1,20 @@
+[
+  {
+    "host": "127.0.0.1",
+    "port": "3693",
+    "Scheme": "http",
+    "basePath": "main"
+  },
+  {
+    "host": "127.0.0.1",
+    "port": "3939",
+    "Scheme": "http",
+    "basePath": "mpay"
+  },
+  {
+    "host": "127.0.0.1",
+    "port": "1515",
+    "Scheme": "http",
+    "basePath": "ns"
+  }
+]

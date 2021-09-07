@@ -1,0 +1,113 @@
+{
+  "mediaFormat": [
+    {
+      "extend": ".png",
+      "ct": "image/png"
+    },
+    {
+      "extend": ".jpg",
+      "ct": "image/jpeg"
+    },
+    {
+      "extend": ".jpeg",
+      "ct": "image/jpeg"
+    },
+    {
+      "extend": ".gif",
+      "ct": "image/gif"
+    },
+    {
+      "extend": ".bmp",
+      "ct": "image/bmp"
+    },
+    {
+      "extend": ".ico",
+      "ct": "image/x-icon"
+    },
+    {
+      "extend": ".css",
+      "ct": "text/css"
+    },
+    {
+      "extend": ".js",
+      "ct": "application/javascript"
+    },
+    {
+      "extend": ".midi",
+      "ct": "audio/midi"
+    },
+    {
+      "extend": ".mpeg",
+      "ct": "audio/mpeg"
+    },
+    {
+      "extend": ".webm",
+      "ct": "audio/webm"
+    },
+    {
+      "extend": ".ogg",
+      "ct": "audio/ogg"
+    },
+    {
+      "extend": ".oga",
+      "ct": "audio/oga"
+    },
+    {
+      "extend": ".mogg",
+      "ct": "audio/mogg"
+    },
+    {
+      "extend": ".mp3",
+      "ct": "audio/mp3"
+    },
+    {
+      "extend": ".wav",
+      "ct": "audio/wav"
+    },
+    {
+      "extend": ".m3u8",
+      "ct": "application/vnd.apple.mpegurl"
+    },
+    {
+      "extend": ".ts",
+      "ct": "video/mp2t"
+    },
+    {
+      "extend": ".mp4",
+      "ct": "video/mp4"
+    },
+    {
+      "extend": ".mov",
+      "ct": "video/quicktime"
+    },
+    {
+      "extend": ".avi",
+      "ct": "video/x-msvideo"
+    },
+    {
+      "extend": ".wmv",
+      "ct": "video/x-ms-wmv"
+    },
+    {
+      "extend": ".json",
+      "ct": "text/json"
+    },
+    {
+      "extend": ".zip",
+      "ct": "application/zip"
+    },
+    {
+      "extend": ".pdf",
+      "ct": "application/pdf"
+    },
+    {
+      "extend": ".txt",
+      "ct": "text/plain"
+    },
+    {
+      "extend": ".html",
+      "ct": "text/html"
+    }
+  ],
+  "fileRoot": ["libjs"]
+}

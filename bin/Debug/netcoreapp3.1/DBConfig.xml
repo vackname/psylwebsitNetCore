@@ -1,0 +1,1545 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DBConfig</name>
+    </assembly>
+    <members>
+        <member name="T:DBConfig.ElseDB">
+            <summary>
+            其它資料庫設定
+            </summary>
+        </member>
+        <member name="F:DBConfig.pubConfigDB.set">
+            <summary>
+            request us for publicCs 常用
+            </summary>
+        </member>
+        <member name="F:DBConfig.pubConfigDB.setWrite">
+            <summary>
+            request us for publicCs 寫入分類
+            </summary>
+        </member>
+        <member name="F:DBConfig.DBServer.catchDB">
+            <summary>
+            被宣告DB設定
+            </summary>
+        </member>
+        <member name="F:DBConfig.DBServer.writeGet">
+            <summary>
+            是否為寫入狀態
+            </summary>
+        </member>
+        <member name="M:DBConfig.DBServer.#ctor(DBConfig.ElseDB,System.Boolean)">
+            <summary>
+            DB connection
+            </summary>
+            <param name="set">setting server</param>
+            <param name="write">write db server choose=true</param>
+        </member>
+        <member name="P:DBConfig.DBServer.ToOpen">
+            <summary>
+            D連接開起B
+            </summary>
+        </member>
+        <member name="M:DBConfig.DBServer.open(System.Action{MySql.Data.MySqlClient.MySqlConnection,DBConfig.DB})">
+            <summary>
+            DB linq
+            </summary>
+            <param name="Ac"></param>
+        </member>
+        <member name="M:DBConfig.DBServer.open(System.Func{MySql.Data.MySqlClient.MySqlConnection,DBConfig.DB,System.Object})">
+            <summary>
+            DB linq
+            </summary>
+            <param name="Ac"></param>
+        </member>
+        <member name="M:DBConfig.DBServer.open``1(System.Func{MySql.Data.MySqlClient.MySqlConnection,DBConfig.DB,``0})">
+            <summary>
+            DB linq
+            </summary>
+            <param name="Ac"></param>
+        </member>
+        <member name="M:DBConfig.DBServer.open(System.Func{MySql.Data.MySqlClient.MySqlConnection,DBConfig.DB,System.Object},System.Func{System.Exception,System.Object})">
+            <summary>
+            DB linq
+            </summary>
+            <param name="Ac"></param>
+        </member>
+        <member name="M:DBConfig.DBServer.open``1(System.Func{MySql.Data.MySqlClient.MySqlConnection,DBConfig.DB,``0},System.Func{System.Exception,``0})">
+            <summary>
+            DB linq
+            </summary>
+            <param name="Ac"></param>
+        </member>
+        <member name="M:DBConfig.DBServer.open(System.Action{MySql.Data.MySqlClient.MySqlConnection,DBConfig.DB},System.Action{System.Exception})">
+            <summary>
+            DB linq
+            </summary>
+            <param name="Ac"></param>
+        </member>
+        <member name="M:DBConfig.DBServer.dbConnectionCK">
+            <summary>
+            db connection type
+            </summary>
+            <returns>(connection bool , error code)</returns>
+        </member>
+        <member name="T:DBConfig.DB">
+            <summary>
+            psyl DB Linq
+            </summary>
+        </member>
+        <member name="M:DBConfig.DB.InsertAutoKey``1(``0)">
+            <summary>
+            insert data(Pkey format string length>100) While Check AutoKey(db-tables key not exist)
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.DB.InsertAutoKey``1(System.Object)">
+            <summary>
+            insert data(Pkey format string length>100) While Check AutoKey(db-tables key not exist)
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.DB.insertGetStr``1(System.Object,System.Boolean)">
+            <summary>
+            item1=sql itme2=object Json
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <param name="pkey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.DB.InsertStr``1(``0,System.Boolean)">
+            <summary>
+            Insert
+            </summary>
+            <returns>The string.</returns>
+            <param name="obj">Object.</param>
+            <typeparam name="T">The 1st type parameter.</typeparam>
+        </member>
+        <member name="M:DBConfig.DB.InsertStr``1(System.Object,System.Boolean)">
+            <summary>
+            Insert
+            </summary>
+            <param name="obj">Object.</param>
+            <typeparam name="T">The 1st type parameter.</typeparam>
+        </member>
+        <member name="M:DBConfig.DB.InsertAutoKeyList``1(System.Collections.Generic.List{System.Object})">
+            <summary>
+            insert data(Pkey format string length>100) While Check AutoKey(db-tables key not exist)
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.DB.UpdateStr``1(``0,System.Boolean)">
+            <summary>
+            Update
+            </summary>
+            <returns>The string.</returns>
+            <param name="obj">Object.</param>
+            <typeparam name="T">The 1st type parameter.</typeparam>
+        </member>
+        <member name="M:DBConfig.DB.UpdateStr``1(System.Object,System.Boolean)">
+            <summary>
+            Update
+            </summary>
+            <param name="obj">Object.</param>
+            <typeparam name="T">The 1st type parameter.</typeparam>
+        </member>
+        <member name="M:DBConfig.DB.DeleteStr``1(``0,System.Boolean)">
+            <summary>
+            Delete
+            </summary>
+            <returns>The string.</returns>
+            <param name="obj">Object.</param>
+            <typeparam name="T">The 1st type parameter.</typeparam>
+        </member>
+        <member name="M:DBConfig.DB.DeleteStr``1(System.String,System.Boolean)">
+            <summary>
+            Delete
+            </summary>
+            <param name="key">remove pkkey</param>
+            <typeparam name="T">The 1st type parameter.</typeparam>
+        </member>
+        <member name="M:DBConfig.DB.DeleteList``1(System.Collections.Generic.List{``0})">
+            <summary>
+            刪除LIST
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+        </member>
+        <member name="M:DBConfig.DB.DeleteList``1(System.Collections.Generic.List{System.String})">
+            <summary>
+            刪除LIST
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">remove pkkey</param>
+        </member>
+        <member name="P:DBConfig.DBAPI.JsonIgnore">
+            <summary>
+            不輪出 JSON
+            </summary>
+        </member>
+        <member name="P:DBConfig.DBAPI.JsonName">
+            <summary>
+            json 輪出 name
+            </summary>
+        </member>
+        <member name="P:DBConfig.DBAPI.TSMark">
+            <summary>
+            TypeScript Description
+            </summary>
+        </member>
+        <member name="P:DBConfig.DBAPI.InputFilter">
+            <summary>
+            輪入 space trim(JObj.DBPost JObj.DBRequestHead)
+            </summary>
+        </member>
+        <member name="P:DBConfig.DBAPI.OutputFilter">
+            <summary>
+            輪出 space trim (JObj.DBJson)
+            </summary>
+        </member>
+        <member name="F:DBConfig.FilterType.No">
+            <summary>
+            Not Filter
+            </summary>
+        </member>
+        <member name="F:DBConfig.FilterType.First">
+            <summary>
+            Filter First space
+            </summary>
+        </member>
+        <member name="F:DBConfig.FilterType.Last">
+            <summary>
+            Filter Last space
+            </summary>
+        </member>
+        <member name="F:DBConfig.FilterType.Trim">
+            <summary>
+            First Last
+            </summary>
+        </member>
+        <member name="T:DBConfig.FType">
+            <summary>
+            約束
+            </summary>
+        </member>
+        <member name="F:DBConfig.FType.ON_DELETE_RESTRICT_ON_UPDATE_RESTRICT">
+            <summary>
+            副鍵不存在，主鍵 才可 刪除 更新
+            </summary>
+        </member>
+        <member name="F:DBConfig.FType.ON_DELETE_CASCADE_ON_UPDATE_CASCADE">
+            <summary>
+            主鍵刪除、更新， 副鍵也刪除、更新 data
+            </summary>
+        </member>
+        <member name="F:DBConfig.FType.ON_DELETE_CASCADE">
+            <summary>
+            主鍵刪除 副鍵也刪除 data
+            </summary>
+        </member>
+        <member name="F:DBConfig.FType.ON_UPDATE_CASCADE">
+            <summary>
+            主鍵更新 副鍵也更新 data
+            </summary>
+        </member>
+        <member name="F:DBConfig.FType.ON_DELETE_SET_NULL_ON_UPDATE_SET_NULL">
+            <summary>
+            副鍵鍵TB不存在 ，主鍵 TB 才可 Droup TB 或 ReFresh TB
+            </summary>
+        </member>
+        <member name="F:DBConfig.FType.ON_DELETE_SET_NULL_ON_UPDATE_RESTRICT">
+            <summary>
+            副鍵鍵TB不存在，主鍵 TB 才可 Droup TB，並副鍵null在才可以刪除、更新主鍵data
+            </summary>
+        </member>
+        <member name="F:DBConfig.FType.ON_UPDATE_SET_NULL_ON_DELETE_RESTRICT">
+            <summary>
+            副鍵鍵TB不存在 ，主鍵 TB 才可 或 ReFresh TB，並副鍵null在才可以刪除、更新主鍵data
+            </summary>
+        </member>
+        <member name="F:DBConfig.FType.ON_DELETE_NO_ACTION_ON_UPDATE_NO_ACTION">
+            <summary>
+            副鍵 主鍵不准許 刪除_更新 data
+            </summary>
+        </member>
+        <member name="F:DBConfig.FType.ON_DELETE_NO_ACTION">
+            <summary>
+            副鍵 主鍵不准許刪除 data
+            </summary>
+        </member>
+        <member name="F:DBConfig.FType.ON_UPDATE_NO_ACTION">
+            <summary>
+            副鍵 主鍵不准許更新 data
+            </summary>
+        </member>
+        <member name="T:DBConfig.DBM">
+            <summary>
+            table attribute
+            </summary>
+        </member>
+        <member name="P:DBConfig.DBM.Index">
+            <summary>
+            create 索引 or setting Group key索引 Group(value="[TB Key]")
+            </summary>
+        </member>
+        <member name="P:DBConfig.DBM.ForeignType">
+            <summary>
+            Foreign Key type限制功能(關聯資料)
+            </summary>
+        </member>
+        <member name="P:DBConfig.DBM.ForeignTB">
+            <summary>
+            關聯資料Obj(TB Name)
+            </summary>
+        </member>
+        <member name="P:DBConfig.DBM.ForeignKey">
+            <summary>
+            關聯資料Obj(TB key)
+            </summary>
+        </member>
+        <member name="P:DBConfig.DBM.PKey">
+            <summary>
+            主要鍵
+            </summary>
+        </member>
+        <member name="P:DBConfig.DBM.Auto">
+            <summary>
+            pkey 是否自動給值
+            </summary>
+        </member>
+        <member name="P:DBConfig.DBM.Length">
+            <summary>
+            值 長度
+            </summary>
+        </member>
+        <member name="P:DBConfig.DBM.Null">
+            <summary>
+            值 是否 null
+            </summary>
+        </member>
+        <member name="P:DBConfig.DBM.JsonName">
+            <summary>
+            json 輪出 name
+            </summary>
+        </member>
+        <member name="P:DBConfig.DBM.JsonIgnore">
+            <summary>
+            不輪出 JSON
+            </summary>
+        </member>
+        <member name="P:DBConfig.DBM.InputFilter">
+            <summary>
+            輪入 space trim
+            </summary>
+        </member>
+        <member name="P:DBConfig.DBM.OutputFilter">
+            <summary>
+            輪出 space trim
+            </summary>
+        </member>
+        <member name="P:DBConfig.DBM.TSMark">
+            <summary>
+            TypeScript Description
+            </summary>
+        </member>
+        <member name="M:DBConfig.DBMigration.#ctor(DBConfig.ElseDB)">
+            <summary>
+            Migration DB
+            </summary>
+            <param name="newDB">DB setting</param>
+        </member>
+        <member name="M:DBConfig.DBMigration.CreateTB``1">
+            <summary>
+            setting schema
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:DBConfig.DBMigration.createDB(System.String,System.Collections.Generic.List{DBConfig.schmaLi},System.Collections.Generic.List{System.Collections.Generic.Dictionary{System.String,System.String}},System.Collections.Generic.List{System.Collections.Generic.List{System.String}})" -->
+        <member name="T:DBConfig.DBMigration.ckshema">
+            <summary>
+            檢測 欄位狀態
+            </summary>
+        </member>
+        <member name="F:DBConfig.schmaLi.nullCK">
+            <summary>
+            被檢測用
+            </summary>
+        </member>
+        <member name="F:DBConfig.schmaLi.lengthCK">
+            <summary>
+            被檢測用
+            </summary>
+        </member>
+        <member name="M:DBConfig.existNullschmaStr.PKey">
+            <summary>
+            type pkey str
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.existNullschmaNu.PKey(System.Boolean)">
+            <summary>
+            type pkey number
+            </summary>
+            <param name="auto">true = number Auto increnment</param>
+            <returns></returns>
+        </member>
+        <member name="T:DBConfig.DBEnumViewName">
+            <summary>
+            JObj.EnumList mark only return(ViewName,key,value)
+            </summary>
+        </member>
+        <member name="M:DBConfig.DBEnumViewName.#ctor(System.String,System.String)">
+            <summary>
+            string Name
+            </summary>
+            <param name="name">output string value</param>
+            <param name="Description">typescript 描述 us</param>
+        </member>
+        <member name="P:DBConfig.toJsonTB`1.val">
+            <summary>
+            json
+            </summary>
+        </member>
+        <member name="T:DBConfig.JobjVal`1">
+            <summary>
+            json document getkey us
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:DBConfig.propJobj">
+            <summary>
+            json document class 取用
+            </summary>
+        </member>
+        <member name="M:DBConfig.propJobj.getJobjStr">
+            <summary>
+            String: key value
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.propJobj.getJobj">
+            <summary>
+            Object:key value
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.propJobj.getObjVal(System.String)">
+            <summary>
+            get key name object value
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="P:DBConfig.enumObj`1.Description">
+            <summary>
+            attr 附屬 說明
+            </summary>
+        </member>
+        <member name="T:DBConfig.enumTsc">
+            <summary>
+            typescript enum key list
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:DBConfig.enumTscObj">
+            <summary>
+            typescript catch enum
+            </summary>
+        </member>
+        <member name="F:DBConfig.JObj.ChareSpaces">
+            <summary>
+             spaces char setting
+            </summary>
+        </member>
+        <member name="M:DBConfig.JObj.EnumTscList``1(System.String)">
+            <summary>
+            取得enum tsc 陣列
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="Description">描述</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.EnumList``1">
+            <summary>
+            取得enum 陣列 (viewName,key,value)
+            </summary>
+        </member>
+        <member name="T:DBConfig.JObj.tscObj">
+            <summary>
+            typescript TB name
+            </summary>
+        </member>
+        <member name="P:DBConfig.JObj.tscObj.mark">
+            <summary>
+            tb descript
+            </summary>
+        </member>
+        <member name="T:DBConfig.JObj.tscFormat">
+            <summary>
+             typescript key mark
+            </summary>
+        </member>
+        <member name="P:DBConfig.JObj.tscFormat.tscMark">
+            <summary>
+            mark
+            </summary>
+        </member>
+        <member name="T:DBConfig.JObj.DBFormat">
+            <summary>
+            for head post
+            </summary>
+        </member>
+        <member name="P:DBConfig.JObj.DBFormat.tsMarkDB">
+            <summary>
+            typescript mark
+            </summary>
+        </member>
+        <member name="P:DBConfig.JObj.DBFormat.tsMarkApi">
+            <summary>
+            typescript mark
+            </summary>
+        </member>
+        <member name="M:DBConfig.JObj.ObjValConvert(System.Type,System.Object)">
+            <summary>
+            未知變數型 驗證型態
+            </summary>
+            <param name="tp"></param>
+            <param name="Value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.TBValConvert(System.Type,System.Object)">
+            <summary>
+            DB to TB value type convert 驗證型態
+            </summary>
+            <param name="tp"></param>
+            <param name="Value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.getTsc``1(System.String)">
+            <summary>
+            catch Typescript key descript
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="TBDescript">table Descript</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.DBGetProperties``1">
+            <summary>
+            取得目前class設定 DBPost DBHead us
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.FilsterKeyVal(System.Collections.Generic.List{DBConfig.JObj.DBFormat},System.Collections.Generic.KeyValuePair{System.String,Microsoft.Extensions.Primitives.StringValues}[])">
+            <summary>
+            取組TB正名 key
+            </summary>
+            <param name="HeadqueryEntities"></param>
+            <param name="oo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.DBPostJson``1(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            POST Http Request data json
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.DBPost``1(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            POST Http Request Form data
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:DBConfig.JObj.DBRequestHead``1(Microsoft.AspNetCore.Http.HttpContext,System.Boolean,System.Boolean)" -->
+        <member name="M:DBConfig.JObj.DBJ``1">
+            <summary>
+            取得 DB key替代名
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns>list key name,output filter,input filter</returns>
+        </member>
+        <member name="M:DBConfig.JObj.outDBOBJ(System.Collections.Generic.KeyValuePair{System.String,System.String},DBConfig.FilterType,DBConfig.FilterType,System.Type)">
+            <summary>
+            return DBM DBAPI format
+            </summary>
+            <param name="a">Key</param>
+            <param name="b">out filter</param>
+            <param name="c">input filter</param>
+            <param name="d">type</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.DBJKeyObj``1(``0,System.Collections.Generic.List{System.ValueTuple{System.Collections.Generic.KeyValuePair{System.String,System.String},DBConfig.FilterType,DBConfig.FilterType,System.Type}},System.Collections.Generic.List{System.String})">
+            <summary>
+            DB取得KEY 陣列 DBJson
+            </summary>
+            <param name="delKey">remove key</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.FilsterList``1(System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,Microsoft.Extensions.Primitives.StringValues}[]})">
+            <summary>
+            Convert to `T object To TB List
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="oo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.Filster``1(System.Collections.Generic.KeyValuePair{System.String,Microsoft.Extensions.Primitives.StringValues}[],System.Collections.Generic.List{Microsoft.AspNetCore.Http.IFormFile})">
+            <summary>
+            Convert to `T object input post head
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="oo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DBConfig.JObj.TBtype`1">
+            <summary>
+            to data type
+            </summary>
+        </member>
+        <member name="M:DBConfig.JObj.TBtype`1.ToList">
+            <summary>
+            data list
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.TBtype`1.First">
+            <summary>
+            only row
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.DBJsonToTB``1(System.String)">
+            <summary>
+            DBJSon convert to TB object(T)
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.DBJsonToTB``1(System.Object)">
+            <summary>
+            DBJSon convert to TB object(T)
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.DBJson``1(System.Object,System.Collections.Generic.List{System.String})">
+            <summary>
+            DBJSon output API catch
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <param name="delKey">remove key</param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:DBConfig.JObj.DBJsonOrg``1(System.Object,System.Boolean,System.Collections.Generic.List{System.String})" -->
+        <member name="M:DBConfig.JObj.DBJson``1(``0,System.Collections.Generic.List{System.String})">
+            <summary>
+            DBJSon output API catch
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <param name="delKey">remove key</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.DBJson``1(System.Collections.Generic.List{``0},System.Collections.Generic.List{System.String})">
+            <summary>
+            DBJSon catch
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <param name="delKey">remove key</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.ExtendDBJson``1(System.Object,System.Collections.Generic.List{System.String})">
+            <summary>
+            DBJson catch(add extend)
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="data">List<object></object> json</param>
+            <param name="delKey">remove key</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.doc(System.String)">
+            <summary>
+            document json object list
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.doc(System.Collections.Generic.KeyValuePair{System.String,System.Object})">
+            <summary>
+            get document json object
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.doc(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            get document json object
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.doc(System.Object)">
+            <summary>
+            document json object list
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.getJobj(System.Object)">
+            <summary>
+            get json key value
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.ser(System.Object,System.Boolean)">
+            <summary>
+            json to string
+            </summary>
+            <param name="obj"></param>
+            <param name="order"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.serUTF8``1(``0)">
+            <summary>
+            object to UTF8
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.serUTF8``1(System.Collections.Generic.List{``0})">
+            <summary>
+            object to UTF8
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.des``1(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            key value to object
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.des``1(System.Collections.Generic.KeyValuePair{System.String,System.Object})">
+            <summary>
+            key value to object
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.des``1(System.String)">
+            <summary>
+            string to object
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.byteToDes``1(System.Byte[])">
+            <summary>
+            byte to object
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.WriteTxt(System.String,System.String,System.Boolean,System.Text.Encoding)">
+            <summary>
+            寫入文檔
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="data">資料</param>
+            <param name="path">檔案路徑</param>
+            <param name="root">根路徑</param>
+            <param name="encoding">format char</param>
+        </member>
+        <member name="M:DBConfig.JObj.ReadTxt(System.String,System.Boolean,System.Boolean,System.Boolean,System.Func{System.String,System.String},System.Text.Encoding)">
+            <summary>
+            讀取文檔
+            </summary>
+            <param name="path">檔案路徑</param>
+            <param name="root">根路徑</param>
+            <param name="linemove">換行</param>
+            <param name="trim">去除前後空白</param>
+            <param name="fun">處置字串 function(列)</param>
+            <param name="encoding">format char</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.readFile``1(System.String,System.Boolean,System.Text.Encoding)">
+            <summary>
+            read to object
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="path">檔案路徑</param>
+            <param name="root">根路徑</param>
+            <param name="encoding">format char</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.writeFile``1(``0,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            write to file list
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <param name="path">檔案路徑</param>
+            <param name="root">根路徑</param>
+            <param name="order">文檔資料排序</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.ReadFileXmltoJson``1(System.String,System.Boolean,System.Func{System.String,System.String},System.Text.Encoding)">
+            <summary>
+            XML file path to JSON Object
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="path">xml file</param>
+            <param name="root">根路徑</param>
+            <param name="fun">處置字串 function(列)</param>
+            <param name="encoding">format char</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.ReadFileXmltoJsonStr``1(System.String,System.Boolean,System.Func{System.String,System.String},System.Text.Encoding)">
+            <summary>
+            XML file path to JSON string
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="path">xml file</param>
+            <param name="root">根路徑</param>
+            <param name="fun">處置字串 function(列)</param>
+            <param name="encoding">format char</param>
+            <param name="toTB">匿名key轉換</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.XmltoJson``1(System.String)">
+            <summary>
+            XML string to JSON Object
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="xml">xml string</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.XmltoJsonStr``1(System.String)">
+            <summary>
+            XML string to JSON String
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="xml">xml string</param>
+            <param name="toTB">匿名key轉換</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.XmltoJsonStr``1(System.Byte[])">
+            <summary>
+            XML bytes to JSON String
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="xml">xml string</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.XmltoJson``1(System.Byte[])">
+            <summary>
+            XML bytes to JSON Object
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="xml">xml string</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.JsonToXmlBytes``1(System.Object)">
+            <summary>
+            JSON Object to XML bytes
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj">json object</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.JsonToXmlBytes``1(``0)">
+            <summary>
+            JSON Object to XML bytes
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj">json object</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.JsonToXmlBytes``1(System.String)">
+            <summary>
+            JSON string to XML String
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json">json string</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.JsonToXmlStr``1(``0)">
+            <summary>
+            JSON Object to XML String
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj">json object</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.JsonToXmlStr``1(System.Object)">
+            <summary>
+            JSON Object to XML String
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj">json object</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.JObj.JsonToXmlStr``1(System.String)">
+            <summary>
+            JSON string to XML String
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json">json string</param>
+            <returns></returns>
+        </member>
+        <member name="P:DBConfig.XMLtoJson`1.val">
+            <summary>
+            json
+            </summary>
+        </member>
+        <member name="M:DBConfig.XMLtoJson`1.toTB``1">
+            <summary>
+            DBAPI OR DBM  key convert to JsonNamejson
+            </summary>
+            <typeparam name="T1"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.XMLtoJsonStr`1.toTB``1">
+            <summary>
+            DBAPI OR DBM  key convert to JsonName json String 
+            </summary>
+            <typeparam name="T1"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.XMLStr`1.toConvertVal``1">
+            <summary>
+            DBAPI OR DBM  key convert to JsonName XML String 
+            </summary>
+            <typeparam name="T1"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.XMLBytes`1.JsonToXmlBytes``1(System.Object)">
+            <summary>
+            JSON Object to XML bytes
+            </summary>
+            <typeparam name="T2"></typeparam>
+            <param name="obj">json object</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.XMLBytes`1.toConvertVal``1">
+            <summary>
+            DBAPI OR DBM  key convert to JsonName XML bytes
+            </summary>
+            <typeparam name="T1"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:DBConfig.APIxsf">
+            <summary>
+            API 防偽驗證 時間驗證性(分鐘)
+            </summary>
+        </member>
+        <member name="M:DBConfig.APIxsf.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="pkey">公鑰加密</param>
+            <param name="content">傳接值加密</param>
+        </member>
+        <member name="P:DBConfig.APIxsf.APIToken">
+            <summary>
+            取得目前 防偽 token mdf5(aaa{content}{pkey}{unix time(long)})
+            </summary>
+        </member>
+        <member name="M:DBConfig.APIxsf.Verify(System.String,System.Int32)">
+            <summary>
+            防驗證 mdf5(aaa{content}{pkey}{unixTime long})
+            </summary>
+            <param name="token">驗證token</param>
+            <param name="secVal">驗證時間臨界點</param>
+            <returns></returns>
+        </member>
+        <member name="F:DBConfig.APIxsf.selfSet">
+            <summary>
+            設定之秒數驗證
+            </summary>
+        </member>
+        <member name="M:DBConfig.APIxsf.VerifyCK(System.String,System.Int32)">
+            驗證過去
+        </member>
+        <member name="T:DBConfig.payloadObj">
+            <summary>
+            TokenEcdsha JWT
+            </summary>
+        </member>
+        <member name="P:DBConfig.payloadObj.iat">
+            <summary>
+            簽入時間
+            </summary>
+        </member>
+        <member name="P:DBConfig.payloadObj.id">
+            <summary>
+            識別碼
+            </summary>
+        </member>
+        <member name="T:DBConfig.TokenEcdsha">
+            <summary>
+            edcha JWT 加解密
+            </summary>
+        </member>
+        <member name="M:DBConfig.TokenEcdsha.HeadTokenVerify(System.Action{DBConfig.payloadObj},System.String,System.Int64)">
+            <summary>
+            與DB真實性驗證 iat
+            </summary>
+            <param name="payload">now DB data</param>
+            <param name="headtoken">head 公鑰</param>
+            <param name="range">驗證範圍(單位-sec)</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.TokenEcdsha.ecdshaSign(System.Action{DBConfig.payloadObj})">
+            <summary>
+            簽入電子簽 response=>公鑰(head Token).加密鑰(signature).PayloadBase64
+            </summary>
+            <param name="pkey">公鑰</param>
+            <param name="payload">加密性有效載入</param>
+            <returns>公鑰(head).加密鑰(signature).PayloadBase64</returns>
+        </member>
+        <member name="M:DBConfig.TokenEcdsha.sha256(System.String)">
+            <summary>
+            sha 256加密
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.TokenEcdsha.ecdshaVerify(System.Int32,System.String)">
+            <summary>
+            電子簽 校驗response (bool,pload object(headtoken=公鑰))
+            </summary>
+            <param name="exsitTime">token存活時間 分鐘</param>
+            <param name="jwt">公鑰.加密鑰</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.pub.GetHeadKey(Microsoft.AspNetCore.Http.HttpContext,System.String)">
+            <summary>
+            取的Head key value
+            </summary>
+            <param name="context"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.pub.GetUserIp(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            catch client ip fornginx
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.pub.inAutoKey">
+            <summary>
+            取不重覆code用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.pub.TBkey(System.String)">
+            <summary>
+            auto key
+            </summary>
+            <param name="nu"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.pub.RequestGet(System.String,System.Object,System.Object,System.Int32,System.Boolean)">
+            <summary>
+            web Get
+            </summary>
+            <param name="Url">路徑</param>
+            <param name="keyValue">post值 rule val[0]=keyname val[1]=value</param>
+            <param name="headKeyValuer">head set key value</param>
+            <param name="Timer">Time out 時間</param>
+            <param name="errorMes">顯示錯誤資訊</param>
+            <returns>String</returns>
+        </member>
+        <member name="M:DBConfig.pub.RequestPost(System.String,System.Object,System.Object,System.Int32,System.Boolean)">
+            <summary>
+            web Post
+            </summary>
+            <param name="Url">路徑</param>
+            <param name="keyValue">post值 rule val[0]=keyname val[1]=value</param>
+            <param name="headKeyValuer">head set key value</param>
+            <param name="Timer">Time out 時間</param>
+            <param name="errorMes">顯示錯誤資訊</param>
+            <returns>String</returns>
+        </member>
+        <member name="M:DBConfig.pub.RequestFilePost(System.String,System.Object,System.Object,System.Collections.Generic.List{System.ValueTuple{System.IO.MemoryStream,System.String}},System.Int32,System.Boolean)">
+            <summary>
+            web Post file
+            </summary>
+            <param name="Url">路徑</param>
+            <param name="keyValue">post值 rule val[0]=keyname val[1]=value</param>
+            <param name="headKeyValuer">head set key value</param>
+            <param name="file">upload file(file memory,filename)</param>
+            <param name="Timer">Time out 時間</param>
+            <param name="errorMes">顯示錯誤資訊</param>
+            <returns>String</returns>
+        </member>
+        <member name="M:DBConfig.pub.lineErr(System.String,System.Int32)">
+            <summary>
+            偵測線路
+            </summary>
+            <param name="URL"></param>
+            <param name="TimeOut">Timeout Microsecond</param>
+            <returns>Item1 = error , Item 2 return mes</returns>
+        </member>
+        <member name="T:DBConfig.pub.MyWebClient">
+            <summary>
+            web client
+            </summary>
+        </member>
+        <member name="M:DBConfig.pub.MD5inCode(System.String)">
+            <summary>
+            MD5
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.pub.encodeKey(System.String)">
+            <summary>
+            加密key function
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.pub.ShortKey(System.String)">
+            <summary>
+            隨機取  catch only key
+            </summary>
+            <param name="instr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DBConfig.ReverseProxyMiddleware">
+            <summary>
+            load banlance Or Reverse Proxy
+            </summary>
+        </member>
+        <member name="F:DBConfig.ReverseProxyMiddleware.ipWatch">
+            <summary>
+            監控IP 進入次數
+            </summary>
+        </member>
+        <member name="F:DBConfig.ReverseProxyMiddleware.apObject">
+            <summary>
+            Proxy host ap
+            </summary>
+        </member>
+        <member name="F:DBConfig.ReverseProxyMiddleware.ProxyAPI_HeadKey">
+            <summary>
+            Proxy API 格式謹存取特定head(支持 proxyType PostFormAndFilesForApi,PostFormConvertToJsonApi,PostJsonConvertToForFormApi)
+            </summary>
+        </member>
+        <member name="F:DBConfig.ReverseProxyMiddleware.refresh">
+            <summary>
+            更新 long out
+            </summary>
+        </member>
+        <member name="M:DBConfig.ReverseProxyMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext,System.Net.Http.IHttpClientFactory,DBConfig.hostObject,DBConfig.ProxyType,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="_httpClientFactory"></param>
+            <param name="Ap"></param>
+            <param name="pt"></param>
+            <param name="ContextResponse">是否Response</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.ReverseProxyMiddleware.ProxyRunAsync(System.Func{System.Threading.Tasks.Task},DBConfig.hostObject)">
+            <summary>
+            偵聽Response 速度
+            </summary>
+            <param name="act"></param>
+            <param name="ap">取得現在站台</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.ReverseProxyMiddleware.CatchHightSpeedProxy(System.Func{System.ValueTuple{System.String,System.Int64,System.String}},System.Double,System.Double,System.Double)">
+            <summary>
+            取出 目前演算 speed fast(比重越大 權重越輕)
+            </summary>
+            <param name="setNowInfo">當前判斷資訊 for Httpcontext.Request (ip,unix time,useragent)</param>
+            <param name="proportionMbidCount">帳戶數權重</param>
+            <param name="proportionIPCount">進入IP比重</param>
+            <param name="proportionSpeed">當前 Proxy 速度</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.ReverseProxyMiddleware.init(System.Func{System.Collections.Generic.List{System.String}})">
+            <summary>
+            初始化 建置 Proxy
+            </summary>
+            <param name="SetCatchHead">Proxy API 格式謹存取特定head(支持 proxyType PostFormAndFilesForApi,,PostFormConvertToJsonApi,PostJsonConvertToForFormApi)</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.ReverseProxyMiddleware.IpWatchCtr(Microsoft.AspNetCore.Http.HttpContext,System.Int32,System.Int32)">
+            <summary>
+            IP 監控(403 prev error,Ip,Now Unix Time)
+            </summary>
+            <param name="context"></param>
+            <param name="sec">秒數內偵聽(3)</param>
+            <param name="RequestCount">秒數內Request次數(9999)</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.ReverseProxyMiddleware.ApiRequestAsync(Microsoft.AspNetCore.Http.HttpContext,System.Net.Http.HttpClient,System.Int32,System.Boolean)">
+            <summary>
+            API Json for missing Data
+            </summary>
+            <param name="targetUri"></param>
+            <param name="context"></param>
+            <param name="ProxyTypeVal">Api 代理狀態</param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.ReverseProxyMiddleware.SetAwaitAcResponse(DBConfig.Proxy_mbidType,DBConfig.ProxyWaitResponse,System.String)">
+            <summary>
+            設定帳戶狀態 awiat response get Account
+            </summary>
+        </member>
+        <member name="M:DBConfig.ReverseProxyMiddleware.runAwaitAcResponse(Microsoft.AspNetCore.Http.HttpContext,DBConfig.hostObject,DBConfig.Proxy_mbidType,System.Int64)">
+            <summary>
+            設定帳戶狀態 response
+            </summary>
+            <param name="context"></param>
+            <param name="ho">運行站台</param>
+            <param name="Account">編緝帳戶</param>
+            <param name="iat">token 簽入時間</param>
+            <returns></returns>
+        </member>
+        <member name="F:DBConfig.ProxyWaitResponse.removeFinal">
+            <summary>
+            帳戶已起用移除modle
+            </summary>
+        </member>
+        <member name="F:DBConfig.ProxyWaitResponse.remove">
+            <summary>
+            移除帳戶
+            </summary>
+        </member>
+        <member name="F:DBConfig.ProxyWaitResponse.run">
+            <summary>
+            運行(自己觸發)
+            </summary>
+        </member>
+        <member name="F:DBConfig.ProxyWaitResponse.response">
+            <summary>
+            wait response (其它人觸發)
+            </summary>
+        </member>
+        <member name="T:DBConfig.ProxyType">
+            <summary>
+            Api 代理Request狀態
+            </summary>
+        </member>
+        <member name="F:DBConfig.ProxyType.PostFormAndFilesForApi">
+            <summary>
+            API=head limit 及 Form,Form.Files
+            </summary>
+        </member>
+        <member name="F:DBConfig.ProxyType.PostFormConvertToJsonApi">
+            <summary>
+            API=head limit 及 Form Convert Json
+            </summary>
+        </member>
+        <member name="F:DBConfig.ProxyType.PostJsonConvertToForFormApi">
+            <summary>
+            API=head limit 及 json Convert Form
+            </summary>
+        </member>
+        <member name="F:DBConfig.ProxyType.publicNormal">
+            <summary>
+            通用 Proxy(Copy Request to Proxy-預設)
+            </summary>
+        </member>
+        <member name="T:DBConfig.hostObject">
+            <summary>
+            proxy Api us
+            </summary>
+        </member>
+        <member name="P:DBConfig.hostObject.speed">
+            <summary>
+            連線速度
+            </summary>
+        </member>
+        <member name="P:DBConfig.hostObject.host">
+            <summary>
+            網域名
+            </summary>
+        </member>
+        <member name="F:DBConfig.hostObject.getProtal">
+            <summary>
+            靜態file 放置入口網站
+            </summary>
+        </member>
+        <member name="P:DBConfig.hostObject.SpeedRefresh">
+            <summary>
+            偵聽連線速度
+            </summary>
+        </member>
+        <member name="P:DBConfig.hostObject.activity">
+            <summary>
+            外部IP活躍時間
+            </summary>
+        </member>
+        <member name="P:DBConfig.hostObject.mbid">
+            <summary>
+            mbid 所屬路由(負載)
+            </summary>
+        </member>
+        <member name="P:DBConfig.hostObject.IP">
+            <summary>
+            記錄IP 被分到哪一個位置
+            </summary>
+        </member>
+        <member name="T:DBConfig.Proxy_mbIP">
+            <summary>
+            Proxy當前使用IP站台
+            </summary>
+        </member>
+        <member name="P:DBConfig.Proxy_mbIP.ip">
+            <summary>
+            登入IP
+            </summary>
+        </member>
+        <member name="P:DBConfig.Proxy_mbIP.exist">
+            <summary>
+            create time
+            </summary>
+        </member>
+        <member name="P:DBConfig.Proxy_mbIP.attk">
+            <summary>
+            被request 次數是否異常
+            </summary>
+        </member>
+        <member name="T:DBConfig.Proxy_mbidType">
+            <summary>
+            Proxy帳戶登入所屬
+            </summary>
+        </member>
+        <member name="P:DBConfig.Proxy_mbidType.ac">
+            <summary>
+            account
+            </summary>
+        </member>
+        <member name="P:DBConfig.Proxy_mbidType.type">
+            <summary>
+            狀態
+            </summary>
+        </member>
+        <member name="P:DBConfig.Proxy_mbidType.create">
+            <summary>
+            登入時間
+            </summary>
+        </member>
+        <member name="P:DBConfig.Proxy_mbidType.state">
+            <summary>
+            狀態
+            </summary>
+        </member>
+        <member name="P:DBConfig.Proxy_mbidType.Response">
+            <summary>
+            回應
+            </summary>
+        </member>
+        <member name="P:DBConfig.VueBundleConfig.mediaFormat">
+            <summary>
+            多媒體 content body
+            </summary>
+        </member>
+        <member name="P:DBConfig.VueBundleConfig.fileRoot">
+            <summary>
+            儲存不同專案基礎路徑
+            </summary>
+        </member>
+        <member name="T:DBConfig.mideaCotentType">
+            <summary>
+            記憶體取值輸出
+            </summary>
+        </member>
+        <member name="T:DBConfig.VueFileStatic">
+            <summary>
+            Vue bundle static file path
+            </summary>
+        </member>
+        <member name="F:DBConfig.VueFileStatic.MaxSize">
+            <summary>
+            img response size,0=無限制(byte),.imgjson
+            </summary>
+        </member>
+        <member name="F:DBConfig.VueFileStatic.ver">
+            <summary>
+            驗證設定
+            </summary>
+        </member>
+        <member name="P:DBConfig.VueFileStatic.HttpPathList">
+            <summary>
+            host 路徑
+            </summary>
+        </member>
+        <member name="P:DBConfig.VueFileStatic.FilePath">
+            <summary>
+            實體路徑root
+            </summary>
+        </member>
+        <member name="T:DBConfig.psylJs">
+            <summary>
+            緩存 記憶體(js 及 css 檔)
+            </summary>
+        </member>
+        <member name="F:DBConfig.psylJs.content">
+            <summary>
+            檔案內容
+            </summary>
+        </member>
+        <member name="F:DBConfig.psylJs.ct">
+            <summary>
+            content type
+            </summary>
+        </member>
+        <member name="F:DBConfig.psylJs.count">
+            <summary>
+            被取用次數
+            </summary>
+        </member>
+        <member name="T:DBConfig.VueBundleMiddleWare">
+            <summary>
+            psyl bundle 注入 connection
+            </summary>
+        </member>
+        <member name="F:DBConfig.VueBundleMiddleWare.fileRoot">
+            <summary>
+            location wwwroot 放置路徑
+            </summary>
+        </member>
+        <member name="F:DBConfig.VueBundleMiddleWare.psylJSCssCK">
+            <summary>
+            js css txt緩存模式起動
+            </summary>
+        </member>
+        <member name="F:DBConfig.VueBundleMiddleWare.psylJSCss">
+            <summary>
+            緩存PSYL前端系統檔案
+            </summary>
+        </member>
+        <member name="F:DBConfig.VueBundleMiddleWare.locationKey">
+            <summary>
+            本機端對應key
+            </summary>
+        </member>
+        <member name="F:DBConfig.VueBundleMiddleWare.tscOutPutPw">
+            <summary>
+            typescript catch password
+            </summary>
+        </member>
+        <member name="F:DBConfig.VueBundleMiddleWare.GetTsc">
+            <summary>
+            output TypeScript db
+            </summary>
+        </member>
+        <member name="F:DBConfig.VueBundleMiddleWare.GetEnumTsc">
+            <summary>
+            output TypeScript enum
+            </summary>
+        </member>
+        <member name="F:DBConfig.VueBundleMiddleWare.FileStatic">
+            <summary>
+            靜態檔路徑設定
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.VueBundleMiddleWare.init">
+            <summary>
+            載入 初始化資訊
+            </summary>
+        </member>
+        <member name="F:DBConfig.webSocket.validateInput">
+            <summary>
+            catch token input time
+            </summary>
+        </member>
+        <member name="F:DBConfig.webSocket.validateToke">
+            <summary>
+            儲存最近catch token
+            </summary>
+        </member>
+        <member name="F:DBConfig.webSocket.validateantiforgerytoken">
+            <summary>
+            是否驗證線路
+            </summary>
+        </member>
+        <member name="F:DBConfig.webSocket.BufferSize">
+            <summary>
+            message container size
+            </summary>
+        </member>
+        <member name="F:DBConfig.webSocket.RegID">
+            <summary>
+            註冊key
+            </summary>
+        </member>
+        <member name="F:DBConfig.webSocket.SendMes">
+            <summary>
+            client send message(self,mes,output get event client)
+            </summary>
+        </member>
+        <member name="F:DBConfig.SocketHandler.RegID">
+            <summary>
+            註冊key
+            </summary>
+        </member>
+        <member name="F:DBConfig.SocketHandler.SendMes">
+            <summary>
+            client send message
+            </summary>
+        </member>
+        <member name="F:DBConfig.SocketHandler.key">
+            <summary>
+            識別Key
+            </summary>
+        </member>
+        <member name="F:DBConfig.SocketHandler.linename">
+            <summary>
+            線路名
+            </summary>
+        </member>
+        <member name="M:DBConfig.SocketHandler.sendMesAsync(System.String)">
+            <summary>
+            send message
+            </summary>
+            <param name="mes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DBConfig.SocketHandler.Map(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            路由處理
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="T:DBConfig.XrsfMiddleWare">
+            <summary>
+            xrsf 驗證
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,95 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "pubclass/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/pubclass.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/pubclass.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "pubclass/1.0.0": {
+      "type": "project",
+      "path": "../pubclass/pubclass.csproj",
+      "msbuildProject": "../pubclass/pubclass.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "pubclass >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/chiwenchung/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/chiwenchung/Projects/psylProject/psylProtal/productCar/productCar.csproj",
+      "projectName": "productCar",
+      "projectPath": "/Users/chiwenchung/Projects/psylProject/psylProtal/productCar/productCar.csproj",
+      "packagesPath": "/Users/chiwenchung/.nuget/packages/",
+      "outputPath": "/Users/chiwenchung/Projects/psylProject/psylProtal/productCar/obj/",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "/Users/chiwenchung/.config/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "projectReferences": {
+            "/Users/chiwenchung/Projects/psylProject/psylProtal/pubclass/pubclass.csproj": {
+              "projectPath": "/Users/chiwenchung/Projects/psylProject/psylProtal/pubclass/pubclass.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.410/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
